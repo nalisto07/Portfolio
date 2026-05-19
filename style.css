@@ -384,18 +384,15 @@ main {
   padding: 22px;
   text-align: center;
   color: var(--text-muted);
-  font-size: 13px;
+  font-size: 15px;
   margin-top: 12px;
   transition: border-color 0.18s;
 }
 
-.trace-zone:hover { border-color: #b0ad a6; color: var(--text-dim); }
-
-.trace-zone small {
-  display: block;
-  font-size: 11px;
-  opacity: 0.6;
-  margin-top: 4px;
+.trace-zone a {
+  color: var(--accent);
+  text-decoration: underline;
+  font-weight: 500;
 }
 
 /* ─── BILAN COMPÉTENCES ─── */

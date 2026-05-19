@@ -6,9 +6,80 @@
   <title>Portfolio BUT R&T — Bilans</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .ac-block {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      margin-top: 14px;
+      background: var(--surface2);
+    }
+    .ac-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    .ac-code {
+      font-family: 'Outfit', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      background: rgba(37,99,235,0.08);
+      border: 1px solid rgba(37,99,235,0.2);
+      padding: 3px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .ac-code.green  { color: var(--accent3); background: rgba(22,163,74,0.08); border-color: rgba(22,163,74,0.2); }
+    .ac-code.purple { color: var(--purple);  background: rgba(124,58,237,0.08); border-color: rgba(124,58,237,0.2); }
+    .ac-label {
+      font-family: 'Lora', serif;
+      font-size: 14px;
+      color: var(--text-dim);
+      line-height: 1.55;
+      flex: 1;
+      min-width: 200px;
+    }
+    .sae-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+    .sae-tag {
+      font-family: 'Outfit', sans-serif;
+      font-size: 11px;
+      padding: 2px 9px;
+      border-radius: 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+    .niveau-line {
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .niveau-line strong { color: var(--text); }
+    .explication {
+      font-family: 'Lora', serif;
+      font-size: 13px;
+      color: var(--text-dim);
+      line-height: 1.7;
+      border-left: 3px solid var(--border);
+      padding-left: 14px;
+      margin: 0;
+      max-width: 100%;
+    }
+    .mt { margin-top: 18px; }
+  </style>
 </head>
 <body>
-
+ 
 <nav>
   <a href="index.html" class="nav-brand">N. Ponsard</a>
   <ul class="nav-links">
@@ -17,105 +88,291 @@
     <li><a href="bilans.html" class="active">📊 Bilans</a></li>
   </ul>
 </nav>
-
+ 
 <main>
   <div class="section-label">📊 Bilans de compétences</div>
   <h2>Mes bilans</h2>
   <p>Bilan de compétences acquises au fil des SAÉ, par compétence du référentiel BUT R&T.</p>
-
-  <!-- Compétence 1 -->
+ 
+  <!-- ══════════════════════════════════════
+       COMPÉTENCE 1 — RT1
+  ══════════════════════════════════════ -->
   <div class="competence-card">
     <div class="competence-header">
       <div class="competence-num">1</div>
       <div>
         <div class="competence-title">Administrer les réseaux et l'Internet</div>
-        <div class="competence-subtitle">Compétence 1 — Semestres 1 &amp; 2</div>
+        <div class="competence-subtitle">Niveau 1 — Assister l'administrateur du réseau · S1</div>
       </div>
     </div>
     <div class="competence-body">
-      <div class="block-title">Niveau de maîtrise</div>
-      <div class="niveau-bar">
-        <div class="niveau-btn">Débutant</div>
-        <div class="niveau-btn">En cours</div>
-        <div class="niveau-btn">Acquis</div>
-        <div class="niveau-btn">Maîtrisé</div>
+ 
+      <div class="block-title">AC11.01</div>
+      <div class="ac-block">
+        <div class="ac-row">
+          <span class="ac-code">AC11.01</span>
+          <span class="ac-label">Maîtriser les lois fondamentales de l'électricité afin d'intervenir sur des équipements de réseaux et télécommunications</span>
+        </div>
+        <div class="sae-tags">
+          <span class="sae-tag">SAÉ1.02</span>
+        </div>
+        <p class="niveau-line">Niveau acquis : <strong>En cours</strong></p>
+        <p class="explication">Lors de la SAÉ 12, j'ai manipulé des équipements réseau Cisco (switchs, câblage) ce qui m'a permis d'appréhender les bases de l'électricité appliquée aux réseaux. Je reste cependant en cours d'acquisition sur la partie théorique des lois fondamentales.</p>
       </div>
-      <div class="block-title">Analyse</div>
-      <p>À compléter dans le code — points forts, points à améliorer, SAÉ associées.</p>
+ 
+      <div class="block-title mt">AC11.02</div>
+      <div class="ac-block">
+        <div class="ac-row">
+          <span class="ac-code">AC11.02</span>
+          <span class="ac-label">Comprendre l'architecture et les fondements des systèmes numériques, les principes du codage de l'information, des communications et de l'Internet</span>
+        </div>
+        <div class="sae-tags">
+          <span class="sae-tag">SAÉ1.01</span>
+          <span class="sae-tag">SAÉ1.02</span>
+        </div>
+        <p class="niveau-line">Niveau acquis : <strong>Acquis</strong></p>
+        <p class="explication">Travaillé dans les SAÉ 11 et 12, notamment à travers les recherches sur le protocole SSH (fonctionnement, chiffrement, paires de clés) et la conception du réseau d'entreprise. Ces deux SAÉ m'ont permis de comprendre l'architecture des systèmes numériques et les principes des communications réseau.</p>
+      </div>
+ 
+      <div class="block-title mt">AC11.03</div>
+      <div class="ac-block">
+        <div class="ac-row">
+          <span class="ac-code">AC11.03</span>
+          <span class="ac-label">Configurer les fonctions de base du réseau local</span>
+        </div>
+        <div class="sae-tags">
+          <span class="sae-tag">SAÉ1.02</span>
+        </div>
+        <p class="niveau-line">Niveau acquis : <strong>En cours</strong></p>
+        <p class="explication">Lors de la SAÉ 12, j'ai configuré les switchs Cisco de niveau 2 avec création des VLANs et mis en place le DHCP. Le service Samba n'a pas pu être finalisé car les notions n'avaient pas encore été vues en cours. Je considère cet AC en cours car il me manque encore de la pratique sur les services réseau.</p>
+      </div>
+ 
+      <div class="block-title mt">AC11.04</div>
+      <div class="ac-block">
+        <div class="ac-row">
+          <span class="ac-code">AC11.04</span>
+          <span class="ac-label">Maîtriser les rôles et les principes fondamentaux des systèmes d'exploitation afin d'interagir avec ceux-ci pour la configuration et l'administration des réseaux et services fournis</span>
+        </div>
+        <div class="sae-tags">
+          <span class="sae-tag">SAÉ1.01</span>
+          <span class="sae-tag">SAÉ1.02</span>
+        </div>
+        <p class="niveau-line">Niveau acquis : <strong>En cours</strong></p>
+        <p class="explication">Abordé dans les SAÉ 11 et 12 à travers l'utilisation d'environnements Linux/Debian et la configuration de services réseau. Je maîtrise les bases mais l'administration avancée d'un système d'exploitation reste à approfondir.</p>
+      </div>
+ 
+      <div class="block-title mt">AC11.05</div>
+      <div class="ac-block">
+        <div class="ac-row">
+          <span class="ac-code">AC11.05</span>
+          <span class="ac-label">Identifier les dysfonctionnements du réseau local et savoir les signaler</span>
+        </div>
+        <div class="sae-tags">
+          <span class="sae-tag">SAÉ1.01</span>
+          <span class="sae-tag">SAÉ1.02</span>
+        </div>
+        <p class="niveau-line">Niveau acquis : <strong>En cours</strong></p>
+        <p class="explication">Dans la SAÉ 12, j'ai rencontré des dysfonctionnements notamment avec le service Samba. J'ai appris à identifier les problèmes mais j'ai eu du mal à prendre le recul nécessaire pour les résoudre méthodiquement. C'est un axe de progression que j'ai identifié dans mon analyse réflexive.</p>
+      </div>
+ 
+      <div class="block-title mt">AC11.06</div>
+      <div class="ac-block">
+        <div class="ac-row">
+          <span class="ac-code">AC11.06</span>
+          <span class="ac-label">Installer un poste client, expliquer la procédure mise en place</span>
+        </div>
+        <div class="sae-tags">
+          <span class="sae-tag">SAÉ1.02</span>
+        </div>
+        <p class="niveau-line">Niveau acquis : <strong>Acquis</strong></p>
+        <p class="explication">Lors de la SAÉ 12, j'ai installé et configuré des postes clients dans un environnement virtualisé Proxmox. La mise en place des machines et leur intégration au réseau m'a permis de maîtriser cet AC.</p>
+      </div>
+ 
     </div>
   </div>
-
-  <!-- Compétence 2 -->
+ 
+  <!-- ══════════════════════════════════════
+       COMPÉTENCE 2 — RT2
+  ══════════════════════════════════════ -->
   <div class="competence-card">
     <div class="competence-header">
       <div class="competence-num green">2</div>
       <div>
         <div class="competence-title">Connecter les entreprises et les usagers</div>
-        <div class="competence-subtitle">Compétence 2 — Semestres 1 &amp; 2</div>
+        <div class="competence-subtitle">Niveau 1 — Découvrir les transmissions et la ToIP · S1</div>
       </div>
     </div>
     <div class="competence-body">
-      <div class="block-title">Niveau de maîtrise</div>
-      <div class="niveau-bar">
-        <div class="niveau-btn">Débutant</div>
-        <div class="niveau-btn">En cours</div>
-        <div class="niveau-btn">Acquis</div>
-        <div class="niveau-btn">Maîtrisé</div>
+ 
+      <div class="block-title green">AC12.01</div>
+      <div class="ac-block">
+        <div class="ac-row">
+          <span class="ac-code green">AC12.01</span>
+          <span class="ac-label">Mesurer et analyser les signaux</span>
+        </div>
+        <div class="sae-tags">
+          <span class="sae-tag">SAÉ1.03</span>
+        </div>
+        <p class="niveau-line">Niveau acquis : <strong>Acquis</strong></p>
+        <p class="explication">Dans la SAÉ 13, j'ai utilisé un oscilloscope et un générateur basse fréquence pour effectuer des mesures DTF sur des câbles cuivre et analyser la propagation des signaux. Cette manipulation concrète m'a permis de relier la théorie à la pratique et de maîtriser cet AC.</p>
       </div>
-      <div class="block-title">Analyse</div>
-      <p>À compléter dans le code.</p>
+ 
+      <div class="block-title green mt">AC12.02</div>
+      <div class="ac-block">
+        <div class="ac-row">
+          <span class="ac-code green">AC12.02</span>
+          <span class="ac-label">Caractériser des systèmes de transmissions élémentaires et découvrir la modélisation mathématique de leur fonctionnement</span>
+        </div>
+        <div class="sae-tags">
+          <span class="sae-tag">SAÉ2.02</span>
+        </div>
+        <p class="niveau-line">Niveau acquis : <strong>Pas encore commencé</strong></p>
+        <p class="explication">Cet AC sera abordé en S2, je n'ai pas encore eu l'occasion de le travailler à ce stade de la formation.</p>
+      </div>
+ 
+      <div class="block-title green mt">AC12.03</div>
+      <div class="ac-block">
+        <div class="ac-row">
+          <span class="ac-code green">AC12.03</span>
+          <span class="ac-label">Déployer des supports de transmission</span>
+        </div>
+        <div class="sae-tags">
+          <span class="sae-tag">SAÉ1.03</span>
+        </div>
+        <p class="niveau-line">Niveau acquis : <strong>Acquis</strong></p>
+        <p class="explication">Lors de la SAÉ 13, j'ai manipulé des câbles cuivre et de la fibre optique. J'ai appris les contraintes physiques de ces supports (rayon de courbure de la fibre, nettoyage des connecteurs) et réalisé des mesures d'atténuation. Ces manipulations m'ont permis de maîtriser le déploiement de supports de transmission.</p>
+      </div>
+ 
+      <div class="block-title green mt">AC12.04</div>
+      <div class="ac-block">
+        <div class="ac-row">
+          <span class="ac-code green">AC12.04</span>
+          <span class="ac-label">Connecter les systèmes de ToIP</span>
+        </div>
+        <div class="sae-tags">
+          <span class="sae-tag">SAÉ2.04</span>
+        </div>
+        <p class="niveau-line">Niveau acquis : <strong>Pas encore commencé</strong></p>
+        <p class="explication">Cet AC sera abordé en S2, je n'ai pas encore eu l'occasion de le travailler à ce stade de la formation.</p>
+      </div>
+ 
+      <div class="block-title green mt">AC12.05</div>
+      <div class="ac-block">
+        <div class="ac-row">
+          <span class="ac-code green">AC12.05</span>
+          <span class="ac-label">Communiquer avec un tiers (client, collaborateur…) et adapter son discours et sa langue à son interlocuteur</span>
+        </div>
+        <div class="sae-tags">
+          <span class="sae-tag">SAÉ1.03</span>
+        </div>
+        <p class="niveau-line">Niveau acquis : <strong>Acquis</strong></p>
+        <p class="explication">Travaillé à travers les présentations orales de la SAÉ 11 et la rédaction du compte rendu technique de la SAÉ 13. Ces exercices m'ont permis d'apprendre à adapter mon discours selon l'interlocuteur et à communiquer de façon claire et structurée.</p>
+      </div>
+ 
     </div>
   </div>
-
-  <!-- Compétence 3 -->
+ 
+  <!-- ══════════════════════════════════════
+       COMPÉTENCE 3 — RT3
+  ══════════════════════════════════════ -->
   <div class="competence-card">
     <div class="competence-header">
       <div class="competence-num purple">3</div>
       <div>
-        <div class="competence-title">Créer des outils et applications informatiques</div>
-        <div class="competence-subtitle">Compétence 3 — Semestres 1 &amp; 2</div>
+        <div class="competence-title">Créer des outils et applications informatiques pour les R&amp;T</div>
+        <div class="competence-subtitle">Niveau 1 — S'intégrer dans un service informatique · S1</div>
       </div>
     </div>
     <div class="competence-body">
-      <div class="block-title">Niveau de maîtrise</div>
-      <div class="niveau-bar">
-        <div class="niveau-btn">Débutant</div>
-        <div class="niveau-btn">En cours</div>
-        <div class="niveau-btn">Acquis</div>
-        <div class="niveau-btn">Maîtrisé</div>
+ 
+      <div class="block-title purple">AC13.01</div>
+      <div class="ac-block">
+        <div class="ac-row">
+          <span class="ac-code purple">AC13.01</span>
+          <span class="ac-label">Utiliser un système informatique et ses outils</span>
+        </div>
+        <div class="sae-tags">
+          <span class="sae-tag">SAÉ1.04</span>
+          <span class="sae-tag">SAÉ1.05</span>
+        </div>
+        <p class="niveau-line">Niveau acquis : <strong>Acquis</strong></p>
+        <p class="explication">Utilisé dans les SAÉ 14 et 15 à travers l'usage d'éditeurs de code, du terminal, de GitHub et des outils de gestion de projet (Trello). Ces SAÉ m'ont permis de devenir à l'aise avec les outils du développement informatique.</p>
       </div>
-      <div class="block-title">Analyse</div>
-      <p>À compléter dans le code.</p>
+ 
+      <div class="block-title purple mt">AC13.02</div>
+      <div class="ac-block">
+        <div class="ac-row">
+          <span class="ac-code purple">AC13.02</span>
+          <span class="ac-label">Lire, exécuter, corriger et modifier un programme</span>
+        </div>
+        <div class="sae-tags">
+          <span class="sae-tag">SAÉ1.05</span>
+        </div>
+        <p class="niveau-line">Niveau acquis : <strong>Acquis</strong></p>
+        <p class="explication">Dans la SAÉ 15, j'ai développé et corrigé un programme Python en binôme réalisant des requêtes HTTP vers des API OpenStreetMap. La lecture, le débogage et la modification du code ont été au cœur de cette SAÉ.</p>
+      </div>
+ 
+      <div class="block-title purple mt">AC13.03</div>
+      <div class="ac-block">
+        <div class="ac-row">
+          <span class="ac-code purple">AC13.03</span>
+          <span class="ac-label">Traduire un algorithme, dans un langage et pour un environnement donné</span>
+        </div>
+        <div class="sae-tags">
+          <span class="sae-tag">SAÉ1.05</span>
+        </div>
+        <p class="niveau-line">Niveau acquis : <strong>Acquis</strong></p>
+        <p class="explication">Dans la SAÉ 15, j'ai traduit en Python un algorithme permettant de récupérer des données JSON depuis une API, de les traiter et de générer un fichier Markdown converti ensuite en HTML. Cet exercice m'a permis de maîtriser la traduction d'un algorithme dans un langage donné.</p>
+      </div>
+ 
+      <div class="block-title purple mt">AC13.04</div>
+      <div class="ac-block">
+        <div class="ac-row">
+          <span class="ac-code purple">AC13.04</span>
+          <span class="ac-label">Connaître l'architecture et les technologies d'un site Web</span>
+        </div>
+        <div class="sae-tags">
+          <span class="sae-tag">SAÉ1.04</span>
+          <span class="sae-tag">SAÉ1.05</span>
+        </div>
+        <p class="niveau-line">Niveau acquis : <strong>Acquis</strong></p>
+        <p class="explication">La SAÉ 14 m'a permis de créer un site multipage en HTML/CSS avec Flexbox et Grid, rendu responsive et validé W3C, hébergé sur GitHub Pages. Cette SAÉ m'a donné une bonne compréhension de l'architecture d'un site web et de ses technologies.</p>
+      </div>
+ 
+      <div class="block-title purple mt">AC13.05</div>
+      <div class="ac-block">
+        <div class="ac-row">
+          <span class="ac-code purple">AC13.05</span>
+          <span class="ac-label">Choisir les mécanismes de gestion de données adaptés au développement de l'outil et argumenter ses choix</span>
+        </div>
+        <div class="sae-tags">
+          <span class="sae-tag">SAÉ1.05</span>
+        </div>
+        <p class="niveau-line">Niveau acquis : <strong>En cours</strong></p>
+        <p class="explication">Dans la SAÉ 15, j'ai manipulé des données au format JSON issues d'une API pour en extraire des statistiques. La compréhension du format JSON et le choix des structures de données adaptées ont été difficiles, c'est pourquoi je considère cet AC encore en cours d'acquisition.</p>
+      </div>
+ 
+      <div class="block-title purple mt">AC13.06</div>
+      <div class="ac-block">
+        <div class="ac-row">
+          <span class="ac-code purple">AC13.06</span>
+          <span class="ac-label">S'intégrer dans un environnement propice au développement et au travail collaboratif</span>
+        </div>
+        <div class="sae-tags">
+          <span class="sae-tag">SAÉ1.05</span>
+        </div>
+        <p class="niveau-line">Niveau acquis : <strong>Acquis</strong></p>
+        <p class="explication">Dans les SAÉ 14 et 15, j'ai utilisé GitHub pour versionner mon code et Trello pour suivre l'avancement des tâches. Le travail en binôme sur la SAÉ 15 avec répartition des tâches m'a permis de m'intégrer dans un environnement de développement collaboratif.</p>
+      </div>
+ 
     </div>
   </div>
-
-  <!-- Compétence 4 — Cybersécurité -->
-  <div class="competence-card">
-    <div class="competence-header">
-      <div class="competence-num orange">4</div>
-      <div>
-        <div class="competence-title">Sécuriser les réseaux et les données</div>
-        <div class="competence-subtitle">Compétence 4 — Parcours Cybersécurité</div>
-      </div>
-    </div>
-    <div class="competence-body">
-      <div class="block-title">Niveau de maîtrise</div>
-      <div class="niveau-bar">
-        <div class="niveau-btn">Débutant</div>
-        <div class="niveau-btn">En cours</div>
-        <div class="niveau-btn">Acquis</div>
-        <div class="niveau-btn">Maîtrisé</div>
-      </div>
-      <div class="block-title">Analyse</div>
-      <p>À compléter dans le code.</p>
-    </div>
-  </div>
-
+ 
 </main>
-
+ 
 <footer>
-  Portfolio BUT Réseaux &amp; Télécommunications — IUT Grand Ouest Normandie · Ponsard Natan · 2026
+  Portfolio BUT Réseaux &amp; Télécommunications — IUT Grand Ouest Normandie · Ponsard Natan · 2025/2026
 </footer>
-
+ 
 </body>
 </html>

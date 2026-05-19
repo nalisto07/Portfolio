@@ -6,9 +6,73 @@
   <title>Portfolio BUT R&T — SAÉ</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .competences-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .comp-tag {
+      font-family: 'Outfit', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 10px;
+    }
+    @media (max-width: 640px) { .two-col { grid-template-columns: 1fr; } }
+    .mini-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+    }
+    .mini-card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .mini-card-title.green  { color: var(--accent3); }
+    .mini-card-title.orange { color: var(--orange); }
+    .mini-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .mini-list li {
+      font-size: 13px;
+      color: var(--text-dim);
+      padding-left: 16px;
+      position: relative;
+      line-height: 1.5;
+      max-width: 100%;
+      margin-bottom: 0;
+    }
+    .mini-list li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--text-muted);
+    }
+  </style>
 </head>
 <body>
-
+ 
 <nav>
   <a href="index.html" class="nav-brand">N. Ponsard</a>
   <ul class="nav-links">
@@ -17,29 +81,27 @@
     <li><a href="bilans.html">📊 Bilans</a></li>
   </ul>
 </nav>
-
+ 
 <main>
   <div class="section-label green">📁 SAÉ</div>
   <h2>Mes SAÉ</h2>
   <p>Cliquez sur une SAÉ pour afficher sa fiche.</p>
-
-  <!-- ── BARRE D'ONGLETS ── -->
+ 
   <div class="tabs-bar" id="tabs-bar">
     <button class="tab-btn active" data-tab="sae-101">SAÉ 11</button>
     <button class="tab-btn" data-tab="sae-102">SAÉ 12</button>
     <button class="tab-btn" data-tab="sae-103">SAÉ 13</button>
     <button class="tab-btn" data-tab="sae-104">SAÉ 14</button>
     <button class="tab-btn" data-tab="sae-105">SAÉ 15</button>
-
   </div>
-
-  <!-- ══════════ S1 ══════════ -->
-
+ 
+  <!-- ══════════ SAÉ 11 ══════════ -->
   <div class="tab-panel active" id="sae-101">
     <div class="sae-title-row">
       <span class="sae-code">SAÉ 11</span>
       <h3>Sensibilisation à l'hygiène informatique</h3>
     </div>
+ 
     <div class="sae-section">
       <div class="block-title">Description &amp; Objectif</div>
       <p>La SAE 11 avait pour but de nous sensibiliser a l'hygiène numérique,
@@ -48,6 +110,20 @@
         l'hygiène numérique ainsi que la cybersécurité.
       </p>
     </div>
+ 
+    <div class="sae-section">
+      <div class="block-title green">Compétences mobilisées</div>
+      <div class="competences-grid">
+        <span class="comp-tag">Sensibilisation à la cybersécurité</span>
+        <span class="comp-tag">Recherche et analyse technique</span>
+        <span class="comp-tag">Travail collaboratif</span>
+        <span class="comp-tag">Présentation orale</span>
+        <span class="comp-tag">Protocole SSH</span>
+        <span class="comp-tag">Hygiène numérique</span>
+        <span class="comp-tag">CTF (Capture The Flag)</span>
+      </div>
+    </div>
+ 
     <div class="sae-section">
       <div class="block-title green">Apprentissages Critiques concernés</div>
       <div class="ac-list">
@@ -55,17 +131,17 @@
           <span class="ac-code">AC11.02</span>
           <span>Comprendre l'architecture et les fondements des systèmes numériques</span>
         </div>
-        
         <div class="ac-item">
           <span class="ac-code">AC11.04</span>
           <span>Maîtriser les rôles et les principes fondamentaux des systèmes d'exploitation</span>
         </div>
         <div class="ac-item">
-        <span class="ac-code">AC11.05</span>
+          <span class="ac-code">AC11.05</span>
           <span>Identifier les dysfonctionnements du réseau local et savoir les signaler</span>
         </div>
       </div>
     </div>
+ 
     <div class="sae-section">
       <div class="block-title orange">Tâches réalisées</div>
       <p>J'ai réaliser le MOOC de L'ANSSI et obtenu cette certification.
@@ -75,13 +151,32 @@
         capture the flag pour les débuts en cybersécurité.
       </p>
     </div>
+ 
     <div class="sae-section">
       <div class="block-title">Résultats obtenus &amp; Traces</div>
-      <p></p>
-      <div class="trace-zone">
+      <div class="two-col">
+        <div class="mini-card">
+          <div class="mini-card-title green">Points forts</div>
+          <ul class="mini-list">
+            <li>Certification ANSSI obtenue</li>
+            <li>Bonne compréhension du protocole SSH</li>
+            <li>Entraînement à la présentation orale</li>
+            <li>Première approche pratique de la cybersécurité via le CTF</li>
+          </ul>
+        </div>
+        <div class="mini-card">
+          <div class="mini-card-title orange">Difficultés rencontrées</div>
+          <ul class="mini-list">
+            <li>Formation MOOC longue, gestion du temps difficile</li>
+            <li>Prise en main des outils de cybersécurité en partant de zéro</li>
+          </ul>
+        </div>
+      </div>
+      <div class="trace-zone" style="margin-top:14px;">
         📎 <small>Insérez ici vos traces individuelles (captures, rapports, livrables…)</small>
       </div>
     </div>
+ 
     <div class="sae-section">
       <div class="block-title purple">Autoévaluation &amp; Analyse réflexive</div>
       <p>Cette SAE m'a permis de revoir et d'apprendre les bonnes pratiques a adopter
@@ -94,39 +189,55 @@
       </p>
     </div>
   </div>
-
+ 
+  <!-- ══════════ SAÉ 12 ══════════ -->
   <div class="tab-panel" id="sae-102">
     <div class="sae-title-row">
       <span class="sae-code">SAÉ 12</span>
       <h3>S'initier aux réseaux informatiques</h3>
     </div>
+ 
     <div class="sae-section">
       <div class="block-title">Description &amp; Objectif</div>
       <p>Cette SAE avait pour objectif de concevoir un petit réseau d'entreprise, avec des equipements Cisco. De faire
         les schémas physique et logique de notre mini réseaux. Mettre en place plusieurs services.
-
       </p>
     </div>
+ 
+    <div class="sae-section">
+      <div class="block-title green">Compétences mobilisées</div>
+      <div class="competences-grid">
+        <span class="comp-tag">Configuration réseaux locaux (LAN)</span>
+        <span class="comp-tag">Administration switchs Cisco</span>
+        <span class="comp-tag">Mise en œuvre de VLANs</span>
+        <span class="comp-tag">Administration Linux / Debian</span>
+        <span class="comp-tag">Services réseau (DHCP, DNS, SMB)</span>
+        <span class="comp-tag">Virtualisation</span>
+        <span class="comp-tag">Travail en équipe</span>
+      </div>
+    </div>
+ 
     <div class="sae-section">
       <div class="block-title green">Apprentissages Critiques (AC) concernés</div>
       <div class="ac-list">
         <div class="ac-item">
-        <span class="ac-code">AC11.01</span>
-          <span>Maitriser les lois fondamentales de l'éléctricité afin d'intervernir sur eds équipements de réseaux et télécominucations.</span>
+          <span class="ac-code">AC11.01</span>
+          <span>Maitriser les lois fondamentales de l'éléctricité afin d'intervernir sur des équipements de réseaux et télécominucations.</span>
         </div>
         <div class="ac-item"><span class="ac-code">AC11.02</span><span>Comprendre l'architecture et les fondements des systèmes numériques</span></div>
         <div class="ac-item"><span class="ac-code">AC11.03</span><span>Configurer les fonctions de base du réseau local</span></div>
         <div class="ac-item">
-        <div class="ac-item">
-        <span class="ac-code">AC11.04</span>
+          <span class="ac-code">AC11.04</span>
           <span>Maîtriser les rôles et les principes fondamentaux des systèmes d'exploitation afin d'interagir avec ceux ci pour la configuration et l'administration des réseaux et services fournis.</span>
         </div>
-        <span class="ac-code">AC11.05</span>
+        <div class="ac-item">
+          <span class="ac-code">AC11.05</span>
           <span>Identifier les dysfonctionnements du réseau local et savoir les signaler</span>
         </div>
         <div class="ac-item"><span class="ac-code">AC11.06</span><span>Installer un poste client</span></div>
       </div>
     </div>
+ 
     <div class="sae-section">
       <div class="block-title orange">Tâches réalisées</div>
       <p>Répartition des tâches aux différents membres du groupe avant de commencer a travailler.
@@ -135,15 +246,36 @@
         nous n'avions pas encore vu en cours comment le mettre en place. La présentation du projeet en groupe, ainsi que le CCNA utilisé pour le QCM.
       </p>
     </div>
+ 
     <div class="sae-section">
       <div class="block-title">Résultats obtenus &amp; Traces</div>
-      <p></p>
-      <div class="trace-zone">📎 <small><a href="Documents/schemalogique.drawio.png" target="_blank">
-Afficher le schéma logique fait lors de cette SAE.
-</a><a href="Documents/Schéma physique.drawio.png" target="_blank"><br>
-Afficher le schema physique fait lors de cette SAE.
-</a></small></div>
+      <div class="two-col">
+        <div class="mini-card">
+          <div class="mini-card-title green">Points forts</div>
+          <ul class="mini-list">
+            <li>Organisation du groupe avec rétroplanning</li>
+            <li>Configuration fonctionnelle des VLANs</li>
+            <li>Compréhension concrète d'un réseau d'entreprise</li>
+            <li>Schémas physique et logique réalisés</li>
+          </ul>
+        </div>
+        <div class="mini-card">
+          <div class="mini-card-title orange">Difficultés rencontrées</div>
+          <ul class="mini-list">
+            <li>Service Samba non fonctionnel — notions non encore vues en cours</li>
+            <li>Utilisation des machines virtuelles Proxmox complexe</li>
+            <li>Manque de recul pour débloquer les problèmes rencontrés</li>
+          </ul>
+        </div>
+      </div>
+      <div class="trace-zone" style="margin-top:14px;">
+        📎 <small>
+          <a href="Documents/schemalogique.drawio.png" target="_blank">Afficher le schéma logique fait lors de cette SAE.</a><br>
+          <a href="Documents/Schéma physique.drawio.png" target="_blank">Afficher le schema physique fait lors de cette SAE.</a>
+        </small>
+      </div>
     </div>
+ 
     <div class="sae-section">
       <div class="block-title purple">Autoévaluation &amp; Analyse réflexive</div>
       <p>Cette SAE était très interessante car elle permet de mieux se rendre compte de comment est constitué un réseaux d'entreprise
@@ -153,12 +285,14 @@ Afficher le schema physique fait lors de cette SAE.
       </p>
     </div>
   </div>
-
+ 
+  <!-- ══════════ SAÉ 13 ══════════ -->
   <div class="tab-panel" id="sae-103">
     <div class="sae-title-row">
       <span class="sae-code">SAÉ 13</span>
       <h3>Découvrir un dispositif de transmission</h3>
     </div>
+ 
     <div class="sae-section">
       <div class="block-title">Description &amp; Objectif</div>
       <p>Cette SAE  avait pour objectif de décrouvrir les supports physique de transmission utilisés en réseaux.
@@ -166,6 +300,19 @@ Afficher le schema physique fait lors de cette SAE.
         pour comprendre le fonctionnement de ces différents supports.
       </p>
     </div>
+ 
+    <div class="sae-section">
+      <div class="block-title green">Compétences mobilisées</div>
+      <div class="competences-grid">
+        <span class="comp-tag">Oscilloscope et GBF</span>
+        <span class="comp-tag">Analyse DTF (Distance To Fault)</span>
+        <span class="comp-tag">Fibre optique et photométrie</span>
+        <span class="comp-tag">Câblage cuivre RJ45</span>
+        <span class="comp-tag">Analyse de signaux</span>
+        <span class="comp-tag">Rédaction de rapports techniques</span>
+      </div>
+    </div>
+ 
     <div class="sae-section">
       <div class="block-title green">Apprentissages Critiques (AC) concernés</div>
       <div class="ac-list">
@@ -174,6 +321,7 @@ Afficher le schema physique fait lors de cette SAE.
         <div class="ac-item"><span class="ac-code">AC12.05</span><span>Communiquer avec un tiers en utilisant des outils numériques</span></div>
       </div>
     </div>
+ 
     <div class="sae-section">
       <div class="block-title orange">Tâches réalisées</div>
       <p>Par groupe nous avons effectué plusieurs manipulation sur les cables cuivre
@@ -183,13 +331,34 @@ Afficher le schema physique fait lors de cette SAE.
         important a ne pas négliger.
       </p>
     </div>
+ 
     <div class="sae-section">
       <div class="block-title">Résultats obtenus &amp; Traces</div>
-      <p></p>
-      <div class="trace-zone">📎 <small><a href="Documents/PONSARD_MARIE_SADOUKI_YAZDANI_SAE13_DTF.pdf" target="_blank">
-Afficher le compte rendu sur la dsitance to Fault de cette SAE.
-</a></small></div>
+      <div class="two-col">
+        <div class="mini-card">
+          <div class="mini-card-title green">Points forts</div>
+          <ul class="mini-list">
+            <li>Mise en pratique concrète de la théorie</li>
+            <li>Utilisation d'appareils de mesure professionnels</li>
+            <li>Compréhension des contraintes physiques de la fibre optique</li>
+            <li>Rapport technique rédigé et rendu</li>
+          </ul>
+        </div>
+        <div class="mini-card">
+          <div class="mini-card-title orange">Difficultés rencontrées</div>
+          <ul class="mini-list">
+            <li>Manipulation de la fibre optique très délicate</li>
+            <li>Professeurs peu disponibles pour répondre aux questions</li>
+          </ul>
+        </div>
+      </div>
+      <div class="trace-zone" style="margin-top:14px;">
+        📎 <small>
+          <a href="Documents/PONSARD_MARIE_SADOUKI_YAZDANI_SAE13_DTF.pdf" target="_blank">Afficher le compte rendu sur la distance to Fault de cette SAE.</a>
+        </small>
+      </div>
     </div>
+ 
     <div class="sae-section">
       <div class="block-title purple">Autoévaluation &amp; Analyse réflexive</div>
       <p>Cette SAE m'a permis d'utiliser des appareils de mesure pour apprendre le fonctionnements des 
@@ -199,12 +368,14 @@ Afficher le compte rendu sur la dsitance to Fault de cette SAE.
       </p>
     </div>
   </div>
-
+ 
+  <!-- ══════════ SAÉ 14 ══════════ -->
   <div class="tab-panel" id="sae-104">
     <div class="sae-title-row">
       <span class="sae-code">SAÉ 14</span>
       <h3>Se présenter sur Internet</h3>
     </div>
+ 
     <div class="sae-section">
       <div class="block-title">Description &amp; Objectif</div>
       <p>Cette SAE avait pour but de mettre en pratique ce que l'on a vu lors des cours
@@ -213,6 +384,20 @@ Afficher le compte rendu sur la dsitance to Fault de cette SAE.
         En parralèle on devait faire part de plusieurs livrables.
       </p>
     </div>
+ 
+    <div class="sae-section">
+      <div class="block-title green">Compétences mobilisées</div>
+      <div class="competences-grid">
+        <span class="comp-tag">HTML5 / CSS3</span>
+        <span class="comp-tag">Flexbox et CSS Grid</span>
+        <span class="comp-tag">Design responsive</span>
+        <span class="comp-tag">Validation W3C</span>
+        <span class="comp-tag">Git et GitHub Pages</span>
+        <span class="comp-tag">Gestion de projet (Trello)</span>
+        <span class="comp-tag">Rétroplanning</span>
+      </div>
+    </div>
+ 
     <div class="sae-section">
       <div class="block-title green">Apprentissages Critiques (AC) concernés</div>
       <div class="ac-list">
@@ -220,6 +405,7 @@ Afficher le compte rendu sur la dsitance to Fault de cette SAE.
         <div class="ac-item"><span class="ac-code">AC13.04</span><span>Connaître l'architecture et les technologies d'un site Web</span></div>
       </div>
     </div>
+ 
     <div class="sae-section">
       <div class="block-title orange">Tâches réalisées</div>
       <p>Avant de commencer a coder mon site internet il a fallu que je découpe et organise mon projet
@@ -228,16 +414,36 @@ Afficher le compte rendu sur la dsitance to Fault de cette SAE.
         a l'aide de flexbox et grid pour la mise en page, également un responsive pour que le site s'adapte
         a n'importe quelle taille d'écran. Je me suis assuré qu'il soit valide au pres de la validation W3C.
         Il est hébergé sur GitHub ainsi que les livrables comme le rétroplanning et le Trello de suivis de tâches.
-
       </p>
     </div>
+ 
     <div class="sae-section">
       <div class="block-title">Résultats obtenus &amp; Traces</div>
-      <p></p>
-      <div class="trace-zone">📎 <small>https://github.com/nalisto07/SAE14_WEB
-        <p>Voici le lien où est hébergé mon site internet.</p>
-      </small></div>
+      <div class="two-col">
+        <div class="mini-card">
+          <div class="mini-card-title green">Points forts</div>
+          <ul class="mini-list">
+            <li>Site responsive fonctionnel et publié en ligne</li>
+            <li>Code validé W3C</li>
+            <li>Bonne maîtrise de Flexbox et Grid</li>
+            <li>Projet bien organisé avec Trello et rétroplanning</li>
+          </ul>
+        </div>
+        <div class="mini-card">
+          <div class="mini-card-title orange">Difficultés rencontrées</div>
+          <ul class="mini-list">
+            <li>Confusion initiale entre Flexbox et Grid, perte de temps</li>
+            <li>Langage HTML/CSS entièrement nouveau en début de formation</li>
+          </ul>
+        </div>
+      </div>
+      <div class="trace-zone" style="margin-top:14px;">
+        📎 <small>https://github.com/nalisto07/SAE14_WEB
+          <p>Voici le lien où est hébergé mon site internet.</p>
+        </small>
+      </div>
     </div>
+ 
     <div class="sae-section">
       <div class="block-title purple">Autoévaluation &amp; Analyse réflexive</div>
       <p>Cette SAE m'a permis d'apprendre a utiliser le langage HTML/CSS que je ne connaissais pas
@@ -250,12 +456,14 @@ Afficher le compte rendu sur la dsitance to Fault de cette SAE.
       </p>
     </div>
   </div>
-
+ 
+  <!-- ══════════ SAÉ 15 ══════════ -->
   <div class="tab-panel" id="sae-105">
     <div class="sae-title-row">
       <span class="sae-code">SAÉ 15</span>
       <h3>Traiter des données</h3>
     </div>
+ 
     <div class="sae-section">
       <div class="block-title">Description &amp; Objectif</div>
       <p>Cette SAE avait pour objectif de coder un programme en python capable de récuperer des données
@@ -263,6 +471,20 @@ Afficher le compte rendu sur la dsitance to Fault de cette SAE.
         en une page HTML. Cette page HTML presentera des statistiques pertinentes sur le sujet de notre choix.
       </p>
     </div>
+ 
+    <div class="sae-section">
+      <div class="block-title green">Compétences mobilisées</div>
+      <div class="competences-grid">
+        <span class="comp-tag">Programmation Python</span>
+        <span class="comp-tag">API REST et Overpass API</span>
+        <span class="comp-tag">Traitement de données JSON</span>
+        <span class="comp-tag">Génération Markdown / HTML</span>
+        <span class="comp-tag">Requêtes HTTP</span>
+        <span class="comp-tag">Calcul de statistiques</span>
+        <span class="comp-tag">Travail en binôme</span>
+      </div>
+    </div>
+ 
     <div class="sae-section">
       <div class="block-title green">Apprentissages Critiques (AC) concernés</div>
       <div class="ac-list">
@@ -273,6 +495,7 @@ Afficher le compte rendu sur la dsitance to Fault de cette SAE.
         <div class="ac-item"><span class="ac-code">AC13.06</span><span>S'intégrer dans un environnement collaboratif</span></div>
       </div>
     </div>
+ 
     <div class="sae-section">
       <div class="block-title orange">Tâches réalisées</div>
       <p>Codage en binôme d'un algorithme en python capable de faire des requêtes HTTP pour contacter les API
@@ -281,35 +504,52 @@ Afficher le compte rendu sur la dsitance to Fault de cette SAE.
         en différrentes tâches pour se les répartir a deux.
       </p>
     </div>
+ 
     <div class="sae-section">
       <div class="block-title">Résultats obtenus &amp; Traces</div>
-      <p></p>
-      <div class="trace-zone">📎 <small><a href="Documents/MARIE_PONSARD_SAE15.py" target="_blank">
-Afficher le projet Python réalisé pendant cette SAE.
-</a></small></div>
+      <div class="two-col">
+        <div class="mini-card">
+          <div class="mini-card-title green">Points forts</div>
+          <ul class="mini-list">
+            <li>Découverte concrète du fonctionnement des API</li>
+            <li>Programme Python fonctionnel générant des statistiques</li>
+            <li>Bonne répartition des tâches en binôme</li>
+          </ul>
+        </div>
+        <div class="mini-card">
+          <div class="mini-card-title orange">Difficultés rencontrées</div>
+          <ul class="mini-list">
+            <li>Compréhension du fonctionnement des API au départ</li>
+            <li>Complexité du format JSON retourné par l'API</li>
+          </ul>
+        </div>
+      </div>
+      <div class="trace-zone" style="margin-top:14px;">
+        📎 <small>
+          <a href="Documents/MARIE_PONSARD_SAE15.py" target="_blank">Afficher le projet Python réalisé pendant cette SAE.</a>
+        </small>
+      </div>
     </div>
+ 
     <div class="sae-section">
       <div class="block-title purple">Autoévaluation &amp; Analyse réflexive</div>
       <p>Cette SAE m'a permis d'apprendre de nouvelles choses en programmation python notamment le fonctionnement des API.
         Elle permet de mettre a profit concretement plutot que de programmer de simple fonction sans réel interêt.
-        La principale difficulté a été la compréhension du fonctionnement des API ainsi que la complexité du ficher .Json. 
-        
+        La principale difficulté a été la compréhension du fonctionnement des API ainsi que la complexité du ficher .Json.
       </p>
     </div>
   </div>
-
-  
-
+ 
 </main>
-
+ 
 <footer>
-  Portfolio BUT Réseaux &amp; Télécommunications — IUT Grand Ouest Normandie · Ponsard Natan · 2026
+  Portfolio BUT Réseaux &amp; Télécommunications — IUT Grand Ouest Normandie · Ponsard Natan · 2025/2026
 </footer>
-
+ 
 <script>
   const buttons = document.querySelectorAll('.tab-btn');
   const panels  = document.querySelectorAll('.tab-panel');
-
+ 
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
       buttons.forEach(b => b.classList.remove('active'));
@@ -320,6 +560,6 @@ Afficher le projet Python réalisé pendant cette SAE.
     });
   });
 </script>
-
+ 
 </body>
 </html>
