@@ -69,6 +69,33 @@
       left: 0;
       color: var(--text-muted);
     }
+ 
+    /* AC inline highlight dans les textes réflexifs */
+    .ac-inline {
+      font-family: 'Outfit', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent3);
+      background: rgba(22,163,74,0.08);
+      padding: 1px 7px;
+      border-radius: 4px;
+      border: 1px solid rgba(22,163,74,0.2);
+      white-space: nowrap;
+    }
+    .progression-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(217,119,6,0.07);
+      border: 1px solid rgba(217,119,6,0.2);
+      border-radius: 7px;
+      padding: 8px 12px;
+      margin-top: 10px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 12px;
+      color: var(--orange);
+      font-weight: 500;
+    }
   </style>
 </head>
 <body>
@@ -173,7 +200,12 @@
         </div>
       </div>
       <div class="trace-zone" style="margin-top:14px;">
-        📎 <small>Insérez ici vos traces individuelles (captures, rapports, livrables…)</small>
+        📎 <small>
+          <a href="/Documents/SSH diapo LOT B.pdf" target="_blank">Afficher le diaporama réalisé en groupe.</a>
+        </small>
+        <p style="margin-top:10px; font-size:12px; color:var(--text-dim); text-align:left;">
+          Voici notre support de présentation réalisé durant la SAE, concrètement la recherche effectuée sur le protocole SSH et la mise en pratique des bases de la cybersécurité.
+        </p>
       </div>
     </div>
  
@@ -182,11 +214,12 @@
       <p>Cette SAE m'a permis de revoir et d'apprendre les bonnes pratiques a adopter
         sur internet. L'oral m'a permis d'être un entrainement pour être plus a l'aise a l'oral
         devant mes camarades. Les recherches effectués sur le protocole SSH, m'ont montrer a quel 
-        point il est important dans les echanges entre client/serveur.
+        point il est important dans les echanges entre client/serveur — ce qui m'a permis de progresser sur <span class="ac-inline">AC11.02</span> et <span class="ac-inline">AC11.04</span>.
         Ce que j'aurai pu ameliorer sur cette SAE est la gestion du temps, en effet la formation MOOC
         de l'ANSSI est plutôt longue il ne fallait pas perdre trop de temps pour en garder suffisament pour 
-        preparer l'oral.
+        preparer l'oral. À l'avenir, je veillerai à mieux planifier ce type de formation longue dès le début du projet.
       </p>
+      <div class="progression-note">⚠ AC à approfondir : <span class="ac-inline">AC11.05</span> — l'identification de dysfonctionnements réseau reste à consolider davantage en pratique.</div>
     </div>
   </div>
  
@@ -273,6 +306,9 @@
           <a href="Documents/schemalogique.drawio.png" target="_blank">Afficher le schéma logique fait lors de cette SAE.</a><br>
           <a href="Documents/Schéma physique.drawio.png" target="_blank">Afficher le schema physique fait lors de cette SAE.</a>
         </small>
+        <p style="margin-top:10px; font-size:12px; color:var(--text-dim); text-align:left;">
+          Ces deux schémas témoignent de ma compréhension de l'architecture réseau mise en place (<strong>AC11.02</strong>, <strong>AC11.03</strong>) : le schéma logique montre l'organisation des VLANs et du DHCP, tandis que le schéma physique retrace le câblage réel des équipements Cisco.
+        </p>
       </div>
     </div>
  
@@ -281,8 +317,10 @@
       <p>Cette SAE était très interessante car elle permet de mieux se rendre compte de comment est constitué un réseaux d'entreprise
         même si ici il était très simplifié, avec la configuration de VLANS, du DHCP. Le travail de groupe m'a aidé a ameliorer l'organisation
         et la communication au sein du groupe. La principale difficulté rencontré était que je n'ai pas réussi a faire fonctionner le service samba
-        et d'absolument vouloir le faire fonctionner sans chercher a réelemnt me poser pour reflechir.
+        et d'absolument vouloir le faire fonctionner sans chercher a réelemnt me poser pour reflechir — ce qui m'a montré que <span class="ac-inline">AC11.03</span> (configurer les fonctions de base du réseau local) et <span class="ac-inline">AC11.05</span> (identifier et résoudre les dysfonctionnements) sont deux AC que je dois encore approfondir.
+        Pour progresser, je compte retravailler la mise en place de services réseau en autonomie via des environnements virtuels, en prenant le temps de lire la documentation avant de manipuler.
       </p>
+      <div class="progression-note">⚠ AC à approfondir : <span class="ac-inline">AC11.03</span> et <span class="ac-inline">AC11.05</span> — configuration de services réseau et méthode de résolution de problèmes.</div>
     </div>
   </div>
  
@@ -355,7 +393,11 @@
       <div class="trace-zone" style="margin-top:14px;">
         📎 <small>
           <a href="Documents/PONSARD_MARIE_SADOUKI_YAZDANI_SAE13_DTF.pdf" target="_blank">Afficher le compte rendu sur la distance to Fault de cette SAE.</a>
+          <a href="Documents/PONSARD_MARIE_SADOUKI_YAZDANI_SAE13_DTF.pdf" target="_blank">Afficher le compte rendu sur la fibre optique de cette SAE.</a>
         </small>
+        <p style="margin-top:10px; font-size:12px; color:var(--text-dim); text-align:left;">
+          Ces comptes rendu illustrent la maîtrise de <strong>AC12.01</strong> (mesurer et analyser les signaux) et <strong>AC12.03</strong> (déployer des supports de transmission) : il retrace les mesures DTF effectuées sur câble cuivre à l'oscilloscope, les mesures réalisées sur la fibre optique les résultats obtenus et leur interprétation technique.
+        </p>
       </div>
     </div>
  
@@ -363,8 +405,10 @@
       <div class="block-title purple">Autoévaluation &amp; Analyse réflexive</div>
       <p>Cette SAE m'a permis d'utiliser des appareils de mesure pour apprendre le fonctionnements des 
         différents supports de transmission en réseau. La manipulation est très interessante car elle permet de 
-        relier la théorie a la pratique. Nous avons eu quelques difficulté sur la partie de la distance to fault
-        les professeurs n'était pas disponible pour apporter des réponses a nos questions.
+        relier la théorie a la pratique, ce qui m'a permis de bien progresser sur <span class="ac-inline">AC12.01</span> (mesurer et analyser les signaux) et <span class="ac-inline">AC12.03</span> (déployer des supports de transmission) que je considère acquis à l'issue de cette SAÉ.
+        Nous avons eu quelques difficulté sur la partie de la distance to fault
+        car les professeurs n'étaient pas disponibles pour apporter des réponses à nos questions — ce qui m'a appris à chercher par moi-même, une compétence utile pour <span class="ac-inline">AC12.05</span>.
+        Pour la suite, je souhaite consolider mes connaissances théoriques sur la modélisation mathématique des signaux, car <span class="ac-inline">AC12.02</span> n'a pas encore été abordé.
       </p>
     </div>
   </div>
@@ -441,18 +485,20 @@
         📎 <small>https://github.com/nalisto07/SAE14_WEB
           <p>Voici le lien où est hébergé mon site internet.</p>
         </small>
+        <p style="margin-top:10px; font-size:12px; color:var(--text-dim); text-align:left;">
+          Le dépôt GitHub contient l'intégralité du code source du site (HTML/CSS, Flexbox, Grid, responsive) ainsi que les livrables de gestion de projet (rétroplanning, Trello). Il atteste de la maîtrise de <strong>AC13.04</strong> (architecture et technologies d'un site web) et de <strong>AC13.01</strong> (utilisation des outils informatiques dans un contexte collaboratif).
+        </p>
       </div>
     </div>
  
     <div class="sae-section">
       <div class="block-title purple">Autoévaluation &amp; Analyse réflexive</div>
       <p>Cette SAE m'a permis d'apprendre a utiliser le langage HTML/CSS que je ne connaissais pas
-        avant cette année, les exercices d'entrainements mon permis de comprendre plus facilement l'utilisation
+        avant cette année. Les exercices d'entrainements m'ont permis de comprendre plus facilement l'utilisation
         des différentes méthodes pour placer ce que l'on souhaite dans notre site. Cette SAE m'a également
-        appris a organiser un projet avec l'utilisation du Trello ainsi que le rétroplanning.
-        Une difficulté que j'ai rencontré au début cetait de bien maitriser Flexbox ainsi que Grid, 
-        avant de faire les exercices d'entrainements je ne comprenais pas vraiment la différence ce qui m'a fais perdre
-        du temps au début.
+        appris a organiser un projet avec l'utilisation du Trello ainsi que le rétroplanning — contribuant ainsi à consolider <span class="ac-inline">AC13.01</span> (utiliser un système informatique et ses outils) et <span class="ac-inline">AC13.04</span> (connaître l'architecture d'un site web), que je considère acquis à l'issue de cette SAÉ.
+        Une difficulté que j'ai rencontré au début cetait de bien maitriser Flexbox ainsi que Grid : avant de faire les exercices d'entrainements je ne comprenais pas vraiment la différence, ce qui m'a fais perdre
+        du temps. Pour la suite, je vais continuer à m'exercer sur des projets web personnels afin de ne pas perdre ces acquis.
       </p>
     </div>
   </div>
@@ -528,15 +574,20 @@
         📎 <small>
           <a href="Documents/MARIE_PONSARD_SAE15.py" target="_blank">Afficher le projet Python réalisé pendant cette SAE.</a>
         </small>
+        <p style="margin-top:10px; font-size:12px; color:var(--text-dim); text-align:left;">
+          Ce script Python illustre la progression sur <strong>AC13.02</strong> et <strong>AC13.03</strong> : on y retrouve les requêtes HTTP vers l'API Overpass, le traitement des données JSON retournées et la génération du fichier Markdown converti en page HTML avec les statistiques finales.
+        </p>
       </div>
     </div>
  
     <div class="sae-section">
       <div class="block-title purple">Autoévaluation &amp; Analyse réflexive</div>
       <p>Cette SAE m'a permis d'apprendre de nouvelles choses en programmation python notamment le fonctionnement des API.
-        Elle permet de mettre a profit concretement plutot que de programmer de simple fonction sans réel interêt.
-        La principale difficulté a été la compréhension du fonctionnement des API ainsi que la complexité du ficher .Json.
+        Elle permet de mettre a profit concrètement les notions de programmation plutôt que de coder de simples fonctions sans réel intérêt.
+        Le travail en binôme avec répartition claire des tâches m'a permis de progresser sur <span class="ac-inline">AC13.06</span> (s'intégrer dans un environnement collaboratif) et <span class="ac-inline">AC13.02</span> (lire, corriger et modifier un programme).
+        La principale difficulté a été la compréhension du fonctionnement des API ainsi que la complexité du fichier JSON — c'est pourquoi <span class="ac-inline">AC13.05</span> (choisir les mécanismes de gestion de données) reste un AC que je dois encore approfondir, notamment en travaillant davantage sur le traitement de structures de données complexes en Python.
       </p>
+      <div class="progression-note">⚠ AC à approfondir : <span class="ac-inline">AC13.05</span> — manipulation et structuration de données JSON complexes.</div>
     </div>
   </div>
  
