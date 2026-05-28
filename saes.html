@@ -69,8 +69,6 @@
       left: 0;
       color: var(--text-muted);
     }
- 
-    /* AC inline highlight dans les textes réflexifs */
     .ac-inline {
       font-family: 'Outfit', sans-serif;
       font-size: 11px;
@@ -95,6 +93,28 @@
       font-size: 12px;
       color: var(--orange);
       font-weight: 500;
+    }
+    .taches-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .taches-list li {
+      font-size: 14px;
+      color: var(--text-dim);
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.7;
+    }
+    .taches-list li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--text-muted);
+      font-weight: 600;
     }
   </style>
 </head>
@@ -171,12 +191,12 @@
  
     <div class="sae-section">
       <div class="block-title orange">Tâches réalisées</div>
-      <p>J'ai réaliser le MOOC de L'ANSSI et obtenu cette certification.
-        En groupe nous avons effectué des recherches sur le thème du SSH, sur son fonctionnement
-        le chiffrement, la paire de clé Publique/Privée. J'ai également participé a la réalisation
-        du support de la présentation pour notre passage a l'oral. On a également effectué un TP 
-        capture the flag pour les débuts en cybersécurité.
-      </p>
+      <ul class="taches-list">
+        <li>J'ai suivi et complété le MOOC de l'ANSSI dans son intégralité, ce qui m'a permis d'obtenir la certification officielle et de consolider mes connaissances sur les bonnes pratiques de sécurité numérique.</li>
+        <li>En groupe, nous avons mené des recherches approfondies sur le protocole SSH : son fonctionnement général, les mécanismes de chiffrement utilisés, ainsi que le principe de la paire de clés Publique/Privée et son rôle dans l'authentification sécurisée.</li>
+        <li>J'ai participé activement à la création du support de présentation pour l'oral, en structurant les informations trouvées de manière claire et adaptée à une présentation devant la classe.</li>
+        <li>Nous avons réalisé un TP de type Capture The Flag (CTF), qui nous a permis d'aborder les bases de la cybersécurité de façon pratique, en résolvant des challenges concrets liés à la sécurité informatique.</li>
+      </ul>
     </div>
  
     <div class="sae-section">
@@ -273,11 +293,14 @@
  
     <div class="sae-section">
       <div class="block-title orange">Tâches réalisées</div>
-      <p>Répartition des tâches aux différents membres du groupe avant de commencer a travailler.
-        J'ai effectué le rétroplanning. Une partie de la configuration des Switch de niveau 2 avec notamment la création des différents VLANs.
-        J'ai également effectué une partie service de la mise en place du service samba, je n'ai malheuresement pas pu le faire fonctionner
-        nous n'avions pas encore vu en cours comment le mettre en place. La présentation du projeet en groupe, ainsi que le CCNA utilisé pour le QCM.
-      </p>
+      <ul class="taches-list">
+        <li>Avant de démarrer le projet, nous avons organisé le travail en groupe en listant les différentes tâches à accomplir et en les répartissant entre chaque membre selon les compétences de chacun.</li>
+        <li>J'ai réalisé le rétroplanning du projet, ce qui nous a permis de visualiser les étapes à respecter et de mieux gérer notre avancement dans le temps imparti.</li>
+        <li>J'ai pris en charge une partie de la configuration des switchs Cisco de niveau 2, notamment la création et l'attribution des différents VLANs pour segmenter le réseau comme demandé.</li>
+        <li>J'ai tenté de mettre en place le service Samba sur une machine Linux afin de permettre le partage de fichiers sur le réseau, mais je n'ai pas réussi à le faire fonctionner correctement, les notions nécessaires n'ayant pas encore été abordées en cours à ce moment-là.</li>
+        <li>Nous avons présenté le projet en groupe devant la classe, en expliquant les choix techniques réalisés et l'architecture mise en place.</li>
+        <li>J'ai utilisé les ressources du cours CCNA pour préparer le QCM associé à cette SAÉ, ce qui m'a permis de consolider les notions théoriques sur les réseaux locaux.</li>
+      </ul>
     </div>
  
     <div class="sae-section">
@@ -362,12 +385,11 @@
  
     <div class="sae-section">
       <div class="block-title orange">Tâches réalisées</div>
-      <p>Par groupe nous avons effectué plusieurs manipulation sur les cables cuivre
-        pour determiner la distance to fault grâce a un oscilloscope, un générateur basse fréquence.
-        Il y avait aussi une mesure sur la fibre optique qui nous as permis de se rendre compte que l'on ne 
-        peux pas plier la fibre optique a un certain degré au risque de l'abimer, le nettoyage etait egalement 
-        important a ne pas négliger.
-      </p>
+      <ul class="taches-list">
+        <li>Nous avons réalisé plusieurs manipulations sur des câbles cuivre afin de déterminer la Distance To Fault (DTF), c'est-à-dire la distance à laquelle se situe un défaut sur le câble. Pour cela, nous avons utilisé un oscilloscope couplé à un générateur basse fréquence (GBF), ce qui nous a permis d'observer et d'analyser les signaux réfléchis.</li>
+        <li>Nous avons effectué des mesures sur de la fibre optique, ce qui nous a permis de comprendre concrètement ses contraintes physiques : notamment qu'il ne faut pas la plier au-delà d'un certain angle sous peine de l'endommager, et que le nettoyage des connecteurs est une étape essentielle pour garantir la qualité du signal.</li>
+        <li>À l'issue des manipulations, j'ai participé à la rédaction du compte rendu technique, en consignant les mesures effectuées, les résultats obtenus et leur interprétation.</li>
+      </ul>
     </div>
  
     <div class="sae-section">
@@ -452,13 +474,14 @@
  
     <div class="sae-section">
       <div class="block-title orange">Tâches réalisées</div>
-      <p>Avant de commencer a coder mon site internet il a fallu que je découpe et organise mon projet
-        en différentes tâches, ce qui permet de voir plus clair dans l'avancé de ce dernier, grace a l'utilisation du Trello et du retroplanning
-        J'ai réaliser une page internet en HTML/CSS, en utilisant mes connaisances acquises en cours ainsi que les exercices d'entrainements
-        a l'aide de flexbox et grid pour la mise en page, également un responsive pour que le site s'adapte
-        a n'importe quelle taille d'écran. Je me suis assuré qu'il soit valide au pres de la validation W3C.
-        Il est hébergé sur GitHub ainsi que les livrables comme le rétroplanning et le Trello de suivis de tâches.
-      </p>
+      <ul class="taches-list">
+        <li>Avant de commencer à coder, j'ai découpé le projet en différentes tâches que j'ai ensuite organisées sur Trello, accompagnées d'un rétroplanning pour planifier les étapes et suivre mon avancement tout au long de la SAÉ.</li>
+        <li>J'ai conçu et développé un site internet complet en HTML/CSS, en m'appuyant sur les notions vues en cours ainsi que sur les exercices d'entraînement réalisés en parallèle. Le site comporte plusieurs pages : une présentation personnelle et une galerie photo.</li>
+        <li>Pour la mise en page, j'ai utilisé Flexbox et CSS Grid, deux approches que j'ai dû apprendre à différencier et à combiner correctement pour obtenir une disposition propre et structurée.</li>
+        <li>J'ai intégré un design responsive au site, en utilisant des media queries pour que l'affichage s'adapte correctement aux différentes tailles d'écran, que ce soit sur ordinateur, tablette ou smartphone.</li>
+        <li>J'ai soumis mon code au validateur W3C afin de vérifier sa conformité aux standards du web et de corriger les éventuelles erreurs de syntaxe.</li>
+        <li>J'ai mis en ligne le site et l'ensemble des livrables de gestion de projet (rétroplanning, tableau Trello) en les hébergeant sur GitHub Pages.</li>
+      </ul>
     </div>
  
     <div class="sae-section">
@@ -544,11 +567,13 @@
  
     <div class="sae-section">
       <div class="block-title orange">Tâches réalisées</div>
-      <p>Codage en binôme d'un algorithme en python capable de faire des requêtes HTTP pour contacter les API
-        pour ensuite recuperer des données que nous allons exploité car elles sont dans un format .Json.
-        Pour ensuite faire des statistiques sur une page HTML. Comme pour la SAE 14 on a du découper le projet
-        en différrentes tâches pour se les répartir a deux.
-      </p>
+      <ul class="taches-list">
+        <li>Comme pour la SAÉ 14, nous avons commencé par découper le projet en tâches distinctes et nous les avons réparties entre les deux membres du binôme, afin de travailler en parallèle de manière organisée.</li>
+        <li>J'ai participé au développement de l'algorithme Python chargé d'envoyer des requêtes HTTP vers l'API Overpass, qui est une interface permettant d'interroger la base de données géographique OpenStreetMap selon des critères précis.</li>
+        <li>Une fois les données reçues, nous avons traité le fichier JSON retourné par l'API afin d'en extraire les informations utiles. Cette étape a nécessité de comprendre la structure parfois complexe du format JSON et de naviguer entre les différents niveaux d'imbrication.</li>
+        <li>À partir des données extraites, nous avons calculé différentes statistiques pertinentes en lien avec notre sujet de recherche, pour donner du sens aux résultats obtenus.</li>
+        <li>Enfin, nous avons généré un fichier Markdown à partir de ces statistiques, qui a ensuite été converti en une page HTML présentant les résultats de manière lisible et structurée.</li>
+      </ul>
     </div>
  
     <div class="sae-section">
