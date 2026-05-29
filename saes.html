@@ -151,11 +151,9 @@
  
     <div class="sae-section">
       <div class="block-title">Description &amp; Objectif</div>
-      <p>La SAE 11 avait pour but de nous sensibiliser a l'hygiène numérique,
-        dans un premier temps nous avons validé le MOOC de l'ANSSI, puis d'un travail de
-        recherche en groupe afin de préparer un oral sur des thèmes imposés en lien avec
-        l'hygiène numérique ainsi que la cybersécurité.
-      </p>
+      <p>La SAÉ 11 avait pour objectif de nous sensibiliser aux enjeux de l'hygiène numérique et de la cybersécurité, deux thématiques fondamentales dans le domaine des réseaux et télécommunications. Le travail se déroulait en deux temps distincts.</p>
+      <p>Dans un premier temps, nous devions suivre et valider individuellement le MOOC de l'ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information), une formation en ligne officielle portant sur les bonnes pratiques à adopter pour sécuriser ses usages numériques. L'obtention de la certification à l'issue de cette formation était un livrable attendu.</p>
+      <p>Dans un second temps, nous devions réaliser un travail de recherche en groupe sur un thème imposé en lien avec la cybersécurité. Notre groupe s'est vu attribuer le protocole SSH. L'objectif était de comprendre son fonctionnement technique, puis de le restituer à l'oral devant la classe à l'aide d'un support de présentation. La SAÉ comprenait également un TP de type Capture The Flag (CTF), permettant une première approche pratique de la sécurité informatique.</p>
     </div>
  
     <div class="sae-section">
@@ -252,9 +250,9 @@
  
     <div class="sae-section">
       <div class="block-title">Description &amp; Objectif</div>
-      <p>Cette SAE avait pour objectif de concevoir un petit réseau d'entreprise, avec des equipements Cisco. De faire
-        les schémas physique et logique de notre mini réseaux. Mettre en place plusieurs services.
-      </p>
+      <p>La SAÉ 12 avait pour objectif de concevoir et de déployer un réseau d'entreprise simplifié, en utilisant des équipements réels de marque Cisco. Il s'agissait d'une mise en pratique concrète des notions vues en cours sur les réseaux locaux, la segmentation par VLANs et l'administration de systèmes.</p>
+      <p>En groupe, nous devions réaliser l'architecture complète du réseau, c'est-à-dire produire à la fois un schéma physique (représentant le câblage réel des équipements) et un schéma logique (illustrant l'organisation logicielle du réseau : VLANs, adressage IP, DHCP). Nous devions ensuite configurer les équipements Cisco pour que le réseau soit fonctionnel.</p>
+      <p>En parallèle, plusieurs services réseau devaient être mis en place sur des machines virtuelles sous Linux/Debian, notamment un serveur DHCP, un serveur DNS et un service de partage de fichiers Samba. La SAÉ se concluait par une présentation orale du projet ainsi qu'un QCM basé sur les ressources du cours CCNA.</p>
     </div>
  
     <div class="sae-section">
@@ -356,10 +354,9 @@
  
     <div class="sae-section">
       <div class="block-title">Description &amp; Objectif</div>
-      <p>Cette SAE  avait pour objectif de décrouvrir les supports physique de transmission utilisés en réseaux.
-        Notamment le cuivre et la fibre optique. Nous devions effectuer des mesures a la manière de TP,
-        pour comprendre le fonctionnement de ces différents supports.
-      </p>
+      <p>La SAÉ 13 avait pour objectif de nous faire découvrir les différents supports physiques de transmission utilisés dans les réseaux, en alliant théorie et pratique. Deux supports ont été étudiés : le câble cuivre (paire torsadée RJ45) et la fibre optique.</p>
+      <p>Le travail se présentait sous la forme de travaux pratiques en groupe, durant lesquels nous devions réaliser des mesures et des manipulations sur ces supports à l'aide d'appareils de mesure professionnels. Pour le câble cuivre, l'objectif était de déterminer la Distance To Fault (DTF), c'est-à-dire la localisation d'un défaut sur un câble, en utilisant un oscilloscope et un générateur basse fréquence (GBF). Pour la fibre optique, il s'agissait de comprendre ses contraintes physiques (rayon de courbure, nettoyage des connecteurs) et d'effectuer des mesures photométriques.</p>
+      <p>À l'issue des manipulations, chaque groupe devait rendre un compte rendu technique détaillant les mesures effectuées, les résultats obtenus et leur interprétation.</p>
     </div>
  
     <div class="sae-section">
@@ -414,11 +411,15 @@
       </div>
       <div class="trace-zone" style="margin-top:14px;">
         📎 <small>
-          <a href="Documents/PONSARD_MARIE_SADOUKI_YAZDANI_SAE13_DTF.pdf" target="_blank">Afficher le compte rendu sur la distance to Fault de cette SAE.</a>
+          <a href="Documents/PONSARD_MARIE_SADOUKI_YAZDANI_SAE13_DTF.pdf" target="_blank">Afficher le compte rendu sur la distance to Fault de cette SAE.</a><br>
           <a href="Documents/PONSARD_MARIE_SADOUKI_YAZDANI_SAE13_DTF.pdf" target="_blank">Afficher le compte rendu sur la fibre optique de cette SAE.</a>
         </small>
         <p style="margin-top:10px; font-size:12px; color:var(--text-dim); text-align:left;">
           Ces comptes rendu illustrent la maîtrise de <strong>AC12.01</strong> (mesurer et analyser les signaux) et <strong>AC12.03</strong> (déployer des supports de transmission) : il retrace les mesures DTF effectuées sur câble cuivre à l'oscilloscope, les mesures réalisées sur la fibre optique les résultats obtenus et leur interprétation technique.
+        </p>
+        <img src="Documents/20260107_103500.jpg" alt="Montage DTF — oscilloscope Siglent et GBF connectés au câble cuivre" style="margin-top:14px; width:100%; max-width:520px; border-radius:8px; border:1px solid var(--border); display:block;" />
+        <p style="margin-top:8px; font-size:12px; color:var(--text-dim); text-align:left;">
+          Cette photo illustre concrètement le montage réalisé lors de la mesure DTF : on y voit l'oscilloscope Siglent (à gauche) et le générateur basse fréquence (au centre) connectés au câble cuivre enroulé sur la table. C'est exactement ce dispositif qui nous a permis d'envoyer un signal dans le câble et d'analyser le signal réfléchi pour localiser le défaut. Elle témoigne de la mise en pratique de <strong>AC12.01</strong> et <strong>AC12.03</strong>.
         </p>
       </div>
     </div>
@@ -444,11 +445,9 @@
  
     <div class="sae-section">
       <div class="block-title">Description &amp; Objectif</div>
-      <p>Cette SAE avait pour but de mettre en pratique ce que l'on a vu lors des cours
-        de R109 le langage HTML/CSS. On devait donc créer une page internet sur le sujet de son choix
-        avec plusieurs pages pour parler de soi et d'une galerie photo, cette page internet devait etre hebergé sur GitHub.
-        En parralèle on devait faire part de plusieurs livrables.
-      </p>
+      <p>La SAÉ 14 avait pour objectif de mettre en pratique les notions de développement web vues dans le cours R109, en créant un site internet personnel hébergé en ligne. Il s'agissait d'une première expérience complète de conception et de publication d'un site web, en partant de zéro.</p>
+      <p>Le site devait comporter plusieurs pages : une page de présentation personnelle, ainsi qu'une galerie photo. Sur le plan technique, le site devait être réalisé uniquement en HTML5 et CSS3, intégrer une mise en page responsive (adaptée à toutes les tailles d'écran), et être validé par le validateur officiel du W3C. Une fois terminé, le site devait être hébergé et accessible en ligne via GitHub Pages.</p>
+      <p>En parallèle du développement, plusieurs livrables de gestion de projet étaient attendus : un rétroplanning planifiant les différentes étapes du projet, ainsi qu'un tableau de suivi des tâches sur Trello. Ces livrables devaient également être déposés sur le dépôt GitHub.</p>
     </div>
  
     <div class="sae-section">
@@ -511,6 +510,10 @@
         <p style="margin-top:10px; font-size:12px; color:var(--text-dim); text-align:left;">
           Le dépôt GitHub contient l'intégralité du code source du site (HTML/CSS, Flexbox, Grid, responsive) ainsi que les livrables de gestion de projet (rétroplanning, Trello). Il atteste de la maîtrise de <strong>AC13.04</strong> (architecture et technologies d'un site web) et de <strong>AC13.01</strong> (utilisation des outils informatiques dans un contexte collaboratif).
         </p>
+        <img src="Documents/Capture d'écran 2026-05-28 175656.png" alt="Historique des commits GitHub — merge branch visible" style="margin-top:14px; width:100%; max-width:520px; border-radius:8px; border:1px solid var(--border); display:block;" />
+        <p style="margin-top:8px; font-size:12px; color:var(--text-dim); text-align:left;">
+          Cette capture d'écran montre l'historique des commits de mon dépôt GitHub. On peut y voir un commit intitulé <em>"Merge branch 'main'"</em> en date du 13 décembre, qui illustre une difficulté rencontrée lors du projet : en modifiant le dépôt depuis deux endroits différents en même temps (l'interface web GitHub et mon environnement local), j'ai provoqué un conflit de branches. Grâce à cette erreur, j'ai compris qu'il faut toujours synchroniser son dépôt local avant de pousser de nouvelles modifications, pour éviter ce type de merge non désiré.
+        </p>
       </div>
     </div>
  
@@ -535,10 +538,9 @@
  
     <div class="sae-section">
       <div class="block-title">Description &amp; Objectif</div>
-      <p>Cette SAE avait pour objectif de coder un programme en python capable de récuperer des données
-        depuis une API lié a OpenStreetMap, de les traiter puis de generer un fichier markdown qui sera ensuite convertis
-        en une page HTML. Cette page HTML presentera des statistiques pertinentes sur le sujet de notre choix.
-      </p>
+      <p>La SAÉ 15 avait pour objectif de développer un programme en Python capable d'interroger une API externe, de traiter les données récupérées, puis de générer automatiquement une page web présentant des statistiques. Ce projet permettait de combiner programmation, manipulation de données et production d'un rendu web.</p>
+      <p>L'API utilisée était l'API Overpass, une interface permettant d'interroger la base de données géographique d'OpenStreetMap. Le programme devait envoyer des requêtes HTTP vers cette API, récupérer les données retournées au format JSON, les traiter pour en extraire des informations pertinentes, puis calculer des statistiques sur un sujet librement choisi.</p>
+      <p>Le résultat final devait prendre la forme d'un fichier Markdown généré automatiquement par le programme, ensuite converti en une page HTML lisible présentant les statistiques produites. Le travail se réalisait en binôme, avec une répartition claire des tâches entre les deux membres, et des livrables de gestion de projet à fournir comme pour la SAÉ 14.</p>
     </div>
  
     <div class="sae-section">
@@ -601,6 +603,10 @@
         </small>
         <p style="margin-top:10px; font-size:12px; color:var(--text-dim); text-align:left;">
           Ce script Python illustre la progression sur <strong>AC13.02</strong> et <strong>AC13.03</strong> : on y retrouve les requêtes HTTP vers l'API Overpass, le traitement des données JSON retournées et la génération du fichier Markdown converti en page HTML avec les statistiques finales.
+        </p>
+        <img src="Documents/Capture d'écran 2026-05-28 182328.png" alt="Page HTML générée — point rouge mal positionné sur la carte" style="margin-top:14px; width:100%; max-width:520px; border-radius:8px; border:1px solid var(--border); display:block;" />
+        <p style="margin-top:8px; font-size:12px; color:var(--text-dim); text-align:left;">
+          Cette capture montre le rendu final de notre page HTML générée par le programme Python. On peut constater que le point rouge censé localiser un établissement sur la carte OpenStreetMap se place systématiquement au centre de la carte, et non à la bonne adresse. Il s'agit d'une limite que nous n'avons pas eu le temps de corriger : nous n'avons pas réussi à récupérer et passer correctement les coordonnées géographiques au composant cartographique. Cela illustre la difficulté rencontrée sur <strong>AC13.05</strong> (gestion et structuration des données JSON complexes).
         </p>
       </div>
     </div>
